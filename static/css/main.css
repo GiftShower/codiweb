@@ -1,0 +1,43 @@
+body, html {
+  height: 100% ;
+    margin: 0;
+}
+.background {
+    background-image: url("/static/resource/ide.png");
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    height: 105%;
+    width: 104%;
+    margin-top: -3px;
+    margin-left: -10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow-x: hidden;
+}
+
+.color {
+    background-color: rgb(41, 55, 78);
+    text-align: center;
+    margin-top: -22px;
+    color: white;
+}
+
+
+.codiText{
+    font-size: 10em;
+    text-align: center;
+    color: white;
+    margin: 0;
+    background-color: rgba(41, 55, 78, 0.7);
+}
+
+.line {
+    position: relative;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin: 10px 20px;
+}
