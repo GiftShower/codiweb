@@ -1,6 +1,7 @@
 body, html {
-  height: 100% ;
+  height: auto ;
     margin: 0;
+    overflow-anchor: none;
 }
 .background {
     background-image: url("/static/resource/ide.png");
@@ -29,9 +30,11 @@ body, html {
 
 .codiText{
     font-size: 10em;
+    position: sticky;
     text-align: center;
     color: white;
     margin: 0;
+    top: 0;
     background-color: rgba(41, 55, 78, 0.7);
 }
 
