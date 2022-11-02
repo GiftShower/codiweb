@@ -1,14 +1,32 @@
 .card {
     margin: 10px 20px 10px 20px;
     color: white;
-    background-color: gray;
-    border-radius: 10px;
     text-align: center;
     padding: 20px;
-    transition-property: background-color;
-    transition-duration: 0.5s;
+    position: relative;
+}
+.zdex {
+    position: relative;
+    z-index: 2;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.card:hover{
-    background-color: cadetblue;
+#parakuro {
+    background-image: url("/static/resource/parakuro.gif");
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    display: block;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+    height: 110px;
+    width: auto;
+    border-radius: 10px;
+    margin: -130.55px 20px 10px 20px;
 }

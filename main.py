@@ -10,9 +10,11 @@ app = Flask(__name__, static_folder="./static")
 def home():
     return render_template('main.html')
 
+
 @app.route('/card')
 def card():
     return render_template('card.html')
+
 
 def tscompile():
     print("Compiling Typescript code...")
