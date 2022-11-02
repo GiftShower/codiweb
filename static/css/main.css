@@ -1,6 +1,10 @@
+
+
 body, html {
-  height: 100% ;
+  height: auto ;
     margin: 0;
+    overflow-anchor: none;
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }
 .background {
     background-image: url("/static/resource/ide.png");
@@ -29,10 +33,13 @@ body, html {
 
 .codiText{
     font-size: 10em;
+    position: sticky;
     text-align: center;
     color: white;
     margin: 0;
-    background-color: rgba(41, 55, 78, 0.7);
+    top: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(35, 47, 66, 0.7);
 }
 
 
@@ -41,5 +48,21 @@ body, html {
     position: relative;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
-    margin: 10px 20px;
+    margin: 35px 70px;
+}
+
+.myButton {
+    color: #ffffff;
+    background-color: #333333;
+    font-size: 26px;
+    border: 1px solid #383838;
+    padding: 10px 60px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    border-radius: 10px;
+}
+.myButton:hover {
+    color: #333333;
+    background-color: #ffffff;
 }
