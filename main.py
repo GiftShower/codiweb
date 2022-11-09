@@ -16,6 +16,11 @@ def card():
     return render_template('card.html')
 
 
+@app.route('/legend')
+def legend():
+    return render_template('legend.html')
+
+
 def tscompile():
     print("Compiling Typescript code...")
     tmpf = open("static/js/scroller.ts", "r")

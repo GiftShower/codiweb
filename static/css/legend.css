@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    overflow-anchor: none !important;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.background {
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+}
+
+.zdex{
+    z-index: 2;
+}
+
+#txt{
+    margin-top: 0;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 7rem;
+    width: 100vw;
+}
+
+#txt2{
+    color: white;
+    text-align: center;
+}
+
+
+.game_img {
+    z-index: 1;
+    filter: blur(3px);
+    background-image: url("../resource/legend.jpg");
+    display: block;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 102vw;
+    height: 20em;
+}
+
+.backColor {
+    background-color: rgb(41, 55, 78);
+    height: 100vh;
+}
