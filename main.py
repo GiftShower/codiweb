@@ -1,7 +1,7 @@
-import os
-
 from flask import Flask, render_template
 import dukpy
+from os import listdir
+from os.path import isfile, join
 
 app = Flask(__name__, static_folder="./static")
 
@@ -23,12 +23,17 @@ def legend():
 
 def tscompile():
     print("Compiling Typescript code...")
-    tmpf = open("static/js/scroller.ts", "r")
-    output_code = dukpy.typescript_compile(tmpf.read())
-    tmpf.close()
-    f = open("static/js/scroller.js", "w")
-    f.write(output_code)
-    f.close()
+    fls = [f for f in listdir("static/js/") if isfile(join("static/js/", f)) and ('.ts' in f)]
+
+    for target in fls:
+        print(target)
+        tmpf = open("static/js/" + target, "r")
+        output_code = dukpy.typescript_compile(tmpf.read())
+        tmpf.close()
+        file = open("static/js/" + target.replace('.ts', '.js'), "w")
+        file.write(output_code)
+        file.close()
+
     print("Typescript code compiled to Javascript.")
 
 

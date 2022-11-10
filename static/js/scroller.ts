@@ -1,3 +1,12 @@
+const closePopup = document.getElementById("popupclose");
+    const overlay = document.getElementById("overlay");
+    const popup = document.getElementById("popup");
+
+    closePopup.onclick = function() {
+        overlay.style.display = 'none';
+        popup.style.display = 'none';
+    };
+
 function scroller() {
     const reveals = document.getElementsByClassName("codiText") as HTMLCollectionOf<HTMLElement>;
     const current = window.scrollY;
@@ -8,6 +17,22 @@ function clickr() {
     window.open("https://github.com/iuicoding");
 }
 
-window.addEventListener('scroll', scroller)
+
+function onMessage(event: MessageEvent) {
+    const data=event.data
+    if(data === "showPopup") {
+        showPopup()
+    }
+}
+
+function showPopup() {
+    const overlay = document.getElementById("overlay");
+    const popup = document.getElementById("popup");
+     overlay.style.display = 'block';
+     popup.style.display = 'block';
+}
+
+window.addEventListener("message", onMessage);
+window.addEventListener('scroll', scroller);
 
 document.getElementsByClassName('myButton')[0].addEventListener('click', clickr)
