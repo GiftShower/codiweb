@@ -17,6 +17,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+{% import "popup.html" as card %}
 <div>
     <h1 class="codiText">ICODI</h1>
     <div class="color">
@@ -41,14 +42,6 @@
         <div class="line"></div>
         <h2>프로젝트 둘러보기</h2>
         <div id="overlay"></div>
-        <div id="popup">
-            <div class="popupcontrols">
-                <span id="popupclose">X</span>
-            </div>
-            <div class="popupcontent">
-                <h1>Some Popup Content</h1>
-            </div>
-        </div>
         <iframe class="card"
                 onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';" sandbox="allow-same-origin allow-scripts"
                 src="card" title="projects" id="ifr"></iframe>
@@ -59,6 +52,7 @@
         <div class="projects"></div>
         <div class="line"></div>
         <h2>연락하기</h2>
+        {{ card.popup(name, imgPath) }}
     </div>
     <div class="background"></div>
 </div>

@@ -8,17 +8,12 @@ app = Flask(__name__, static_folder="./static")
 
 @app.route('/')
 def home():
-    return render_template('main.html')
+    return render_template('main.html', name="test", imgPath="../static/resource/legend.jpg")
 
 
 @app.route('/card')
 def card():
     return render_template('card.html')
-
-
-@app.route('/legend')
-def legend():
-    return render_template('legend.html')
 
 
 def tscompile():

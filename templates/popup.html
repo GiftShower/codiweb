@@ -1,0 +1,11 @@
+{% macro popup(Title, Image) -%}
+<div id="popup">
+    <div class="popupcontent">
+        <img alt="Image of game" src="{{Image}}">
+        <h1>{{Title}}</h1>
+    </div>
+    <div class="popupcontrols">
+        <span id="popupclose">X</span>
+    </div>
+</div>
+{%- endmacro %}
