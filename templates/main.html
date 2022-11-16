@@ -41,7 +41,6 @@
         </p>
         <div class="line"></div>
         <h2>프로젝트 둘러보기</h2>
-        <div id="overlay"></div>
         <iframe class="card"
                 onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';" sandbox="allow-same-origin allow-scripts"
                 src="card" title="projects" id="ifr"></iframe>
@@ -52,7 +51,10 @@
         <div class="projects"></div>
         <div class="line"></div>
         <h2>연락하기</h2>
-        {{ card.popup(name, imgPath) }}
+        {% for name, imgPath, id in datas %}
+            {{ card.popup(name, imgPath, id) }}
+        {% endfor %}
+    <div id="overlay"></div>
     </div>
     <div class="background"></div>
 </div>

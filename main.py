@@ -8,7 +8,11 @@ app = Flask(__name__, static_folder="./static")
 
 @app.route('/')
 def home():
-    return render_template('main.html', name="test", imgPath="../static/resource/legend.jpg")
+    depath = "../static/resource/"
+    return render_template(
+        'main.html',
+        datas=[("parakuro", depath+"parakuro.gif", "pkr"),
+               ("LEGEND", depath+"legend.jpg", "lgn")])
 
 
 @app.route('/card')

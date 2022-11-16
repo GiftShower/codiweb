@@ -1,11 +1,13 @@
-const closePopup = document.getElementById("popupclose");
-    const overlay = document.getElementById("overlay");
-    const popup = document.getElementById("popup");
+const closePopup = document.getElementsByClassName("popupclose");
+const overlay = document.getElementById("overlay");
+const popup = document.getElementsByClassName("popup");
 
-    closePopup.onclick = function() {
-        overlay.style.display = 'none';
-        popup.style.display = 'none';
-    };
+for (let i = 0; i < closePopup.length; i++) {
+    closePopup[i].addEventListener("click", () => {
+        popup[i].classList.toggle("on", false)
+        overlay.classList.toggle("on", false)
+    })
+}
 
 function scroller() {
     const reveals = document.getElementsByClassName("codiText") as HTMLCollectionOf<HTMLElement>;
@@ -19,17 +21,17 @@ function clickr() {
 
 
 function onMessage(event: MessageEvent) {
-    const data=event.data
-    if(data === "showPopup") {
-        showPopup()
+    const data = event.data
+    if(data[0] === "showPopup") {
+        showPopup(data[1])
     }
 }
 
-function showPopup() {
+function showPopup(id) {
     const overlay = document.getElementById("overlay");
-    const popup = document.getElementById("popup");
-     overlay.style.display = 'block';
-     popup.style.display = 'block';
+    const popup = document.getElementById(id);
+     overlay.classList.toggle("on", true)
+     popup.classList.toggle("on", true)
 }
 
 window.addEventListener("message", onMessage);

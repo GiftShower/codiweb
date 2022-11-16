@@ -1,11 +1,11 @@
-{% macro popup(Title, Image) -%}
-<div id="popup">
+{% macro popup(Title, Image, ID) -%}
+<div class="popup" id="{{ID}}">
     <div class="popupcontent">
         <img alt="Image of game" src="{{Image}}">
         <h1>{{Title}}</h1>
     </div>
     <div class="popupcontrols">
-        <span id="popupclose">X</span>
+        <span class="popupclose">닫기</span>
     </div>
 </div>
 {%- endmacro %}
