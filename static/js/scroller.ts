@@ -36,5 +36,4 @@ function showPopup(id) {
 
 window.addEventListener("message", onMessage);
 window.addEventListener('scroll', scroller);
-
-document.getElementsByClassName('myButton')[0].addEventListener('click', clickr)
+document.querySelector("#myButton").addEventListener('click', clickr)
