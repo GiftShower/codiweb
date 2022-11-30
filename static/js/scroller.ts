@@ -12,8 +12,8 @@ for (let i = 0; i < closePopup.length; i++) {
 function scroller() {
     const reveals = document.getElementsByClassName("codiText") as HTMLCollectionOf<HTMLElement>;
     const current = window.scrollY;
-    reveals.item(0).style.fontSize = `clamp(5em, calc(10em - ${current}px), 10em)`
-    reveals.item(0).style.backgroundColor = `rgba(35, 47, 66, clamp(0.7, calc(${current}/100), 1.0))`
+    reveals[0].style.fontSize = `clamp(5em, calc(10em - ${current}px), 10em)`
+    reveals[0].style.backgroundColor = `rgba(35, 47, 66, clamp(0.7, calc(${current}/100), 1.0))`
 }
 function clickr() {
     window.open("https://github.com/iuicoding");
@@ -27,6 +27,10 @@ function onMessage(event: MessageEvent) {
     }
 }
 
+const ghButton: HTMLElement = document.getElementById("myButton") as HTMLElement;
+ghButton.addEventListener('click', clickr)
+
+
 function showPopup(id) {
     const overlay = document.getElementById("overlay");
     const popup = document.getElementById(id);
@@ -36,4 +40,3 @@ function showPopup(id) {
 
 window.addEventListener("message", onMessage);
 window.addEventListener('scroll', scroller);
-document.querySelector("#myButton").addEventListener('click', clickr)

@@ -133,3 +133,13 @@ body, html {
         padding: 10px;
         cursor: pointer;
 }
+
+.desc {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.signup {
+    margin-left: 96px;
+    margin-right: 96px;
+}

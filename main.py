@@ -9,10 +9,14 @@ app = Flask(__name__, static_folder="./static")
 @app.route('/')
 def home():
     depath = "../static/resource/"
+    pkrDesc = open("static/resource/description/parakuro.txt", "r")
+    engDesc = open("static/resource/description/english.txt", "r")
+    lgnDesc = open("static/resource/description/legend.txt", "r")
     return render_template(
         'main.html',
-        datas=[("parakuro", depath+"parakuro.gif", "pkr"),
-               ("LEGEND", depath+"legend.jpg", "lgn")])
+        datas=[("parakuro", depath+"parakuro.gif", "pkr", pkrDesc.read()),
+               ("LEGEND", depath+"legend.jpg", "lgn", lgnDesc.read()),
+               ("ENGLISH", depath+"english.jpg", 'eng', engDesc.read())])
 
 
 @app.route('/card')

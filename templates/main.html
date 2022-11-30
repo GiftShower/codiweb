@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
-<script src="../static/js/scroller.js" type="text/javascript"></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
@@ -51,12 +50,17 @@
         <div class="projects"></div>
         <div class="line"></div>
         <h2>연락하기</h2>
-        {% for name, imgPath, id in datas %}
-            {{ card.popup(name, imgPath, id) }}
+        {% for name, imgPath, id, desc in datas %}
+            {{ card.popup(name, imgPath, id, desc) }}
         {% endfor %}
+        <h1>동★아★리★원★모★집★중</h1>
+        <div class="signup">
+            {% include 'signup.html' %}
+        </div>
     <div id="overlay"></div>
     </div>
     <div class="background"></div>
 </div>
+<script src="../static/js/scroller.js" type="text/javascript"></script>
 </body>
 </html>
