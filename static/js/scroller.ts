@@ -18,7 +18,9 @@ function scroller() {
 function clickr() {
     window.open("https://github.com/iuicoding");
 }
-
+function clckrt() {
+    window.open("https://dev.to/giftshower");
+}
 
 function onMessage(event: MessageEvent) {
     const data = event.data
@@ -30,6 +32,8 @@ function onMessage(event: MessageEvent) {
 const ghButton: HTMLElement = document.getElementById("myButton") as HTMLElement;
 ghButton.addEventListener('click', clickr)
 
+const dvtButton: HTMLElement = document.getElementById("dvtButton") as HTMLElement;
+dvtButton.addEventListener('click', clckrt)
 
 function showPopup(id) {
     const overlay = document.getElementById("overlay");

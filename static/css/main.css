@@ -143,3 +143,20 @@ body, html {
     margin-left: 96px;
     margin-right: 96px;
 }
+
+.devtobutton {
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 26px;
+    border: 1px solid #000000;
+    padding: 10px 60px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    border-radius: 10px;
+}
+
+.devtobutton:hover { 
+    color: #000000;
+	background-color: #ffffff;
+}
