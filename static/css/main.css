@@ -160,3 +160,51 @@ body, html {
     color: #000000;
 	background-color: #ffffff;
 }
+
+.popupcontrols {
+    transform: translateY(2em);
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+a.popupclose{
+    background-color: #3d5474;
+    color: #fff;
+    font-family: Trebuchet MS;
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 14px 15px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 0px #2D2D2D;
+   }
+   a.popupclose:hover{
+    background-color: #596272;
+   }
+   a.popupclose:active{
+    transform: scale(0.95);
+   }
+
+   a.runapp{
+    background-color: #4074bf;
+    color: #fff;
+    font-family: Trebuchet MS;
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 14px 15px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 0px #2D2D2D;
+   }
+   a.runapp:hover{
+    background-color: #6588c6;
+   }
+   a.runapp:active{
+    transform: scale(0.95);
+   }

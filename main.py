@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 import dukpy
+import os
 from os import listdir
 from os.path import isfile, join
 
@@ -14,15 +15,20 @@ def home():
     lgnDesc = open("static/resource/description/legend.txt", "r")
     return render_template(
         'main.html',
-        datas=[("parakuro", depath+"parakuro.gif", "pkr", pkrDesc.read()),
-               ("LEGEND", depath+"legend.jpg", "lgn", lgnDesc.read()),
-               ("ENGLISH", depath+"english.jpg", 'eng', engDesc.read())])
+        datas=[("parakuro", depath+"parakuro.gif", "pkr", pkrDesc.read(), "/parakuro"),
+               ("LEGEND", depath+"legend.jpg", "lgn", lgnDesc.read(), "/legend"),
+               ("ENGLISH", depath+"english.jpg", 'eng', engDesc.read(), "/english")])
 
 
 @app.route('/card')
 def card():
     return render_template('card.html')
 
+@app.route('/english')
+def english():
+    current_dir = r"C:\Users\Admin\Documents\files"
+    subprocess.Popen(os.path.join(current_dir,"english.exe"))
+    return redirect('/')
 
 def tscompile():
     print("Compiling Typescript code...")

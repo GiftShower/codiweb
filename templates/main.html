@@ -45,8 +45,8 @@
                 src="card" title="projects" id="ifr"></iframe>
         <div class="projects"></div>
         <div class="line"></div>
-        {% for name, imgPath, id, desc in datas %}
-            {{ card.popup(name, imgPath, id, desc) }}
+        {% for name, imgPath, id, desc, exec in datas %}
+            {{ card.popup(name, imgPath, id, desc, exec) }}
         {% endfor %}
         <h1>개발자 소식 받기</h1>
         <div class="signup">

@@ -1,4 +1,4 @@
-{% macro popup(Title, Image, ID, Desc) -%}
+{% macro popup(Title, Image, ID, Desc, exec) -%}
 <div class="popup" id="{{ID}}">
     <div class="popupcontent">
         <img alt="Image of game" src="{{Image}}">
@@ -6,7 +6,8 @@
         <p class="desc">{{Desc}}</p>
     </div>
     <div class="popupcontrols">
-        <span class="popupclose">닫기</span>
+        <a class="runapp" href="{{exec}}" >열기</a>
+        <a class="popupclose" href="#">닫기</a>
     </div>
 </div>
 {%- endmacro %}
